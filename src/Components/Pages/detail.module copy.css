@@ -1,0 +1,22 @@
+.box {
+    width: 400px;
+    height: auto;
+    border: 10px solid transparent;
+    background: 
+      linear-gradient(rgb(8, 5, 5), rgb(1, 1, 1)) padding-box,
+      repeating-linear-gradient(90deg, /* Cambié a 90deg para líneas verticales */
+        rgb(255, 255, 255) 0, rgb(255, 255, 255) 25%, 
+        transparent 0, transparent 50%) border-box;
+    animation: move 5s linear infinite;
+    background-size: 1em 1em; /* Esto controla el tamaño de las líneas */
+  }
+  
+  @keyframes move {
+    0% {
+      background-position: 0 0; /* Al inicio, las líneas están en la posición 0 */
+    }
+    100% {
+      background-position: 1em 0; /* Al final, las líneas se moverán a la derecha */
+    }
+  }
+  
