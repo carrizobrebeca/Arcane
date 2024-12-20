@@ -1,13 +1,14 @@
 import React from "react";
-import Navbar from "../Pages/Navbar";
-import NavbarDesp from "../Pages/NavbarDesp";
-import Card from "../Pages/Card";
+import Navbar from "./Navbar";
+import NavbarDesp from "./NavbarDesp";
+import Card from "./Card";
 
+//import characters from "./data.js";
 
-const Characters = () => {
+const Zaun = () => {
   return (
     <>
-    <Navbar />
+       <Navbar />
     <NavbarDesp />
       <div className="bg-gradient-to-b from-[#090932] from-50% via-cyan-900 via-90% to-cyan-900 to-90% bg-cover "
         style={{
@@ -35,4 +36,4 @@ const Characters = () => {
   );
 };
 
-export default Characters;
+export default Zaun;

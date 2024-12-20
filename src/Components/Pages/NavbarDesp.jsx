@@ -47,21 +47,57 @@ const NavbarDesp = () => {
                   : ""
               }`}
             >
-              CHARACTERS
+              ALL CHARACTERS
             </span>
           </button>
         )}
-        {location.pathname === "/Arcane-characters" && (
+   
+   {location.pathname === "/Arcane-characters" && (
           <button
             className="pl-4 text-bold text-orange-200"
-            onClick={() => handleButtonClick("all")}
+            onClick={() => handleButtonClick("piltover")}
           >
             <span
               className={`inline-block ${
-                activeButton === "all" ? "border-b-2 border-orange-200" : ""
+                activeButton === "piltover"
+                  ? "border-b-2 border-orange-200"
+                  : ""
               }`}
             >
-              ALL
+              Piltover
+            </span>
+          </button>
+        )}
+   {location.pathname === "/Arcane-characters-detail" && (
+          <button
+            className="pl-4 text-bold text-orange-200"
+            onClick={() => {
+              handleButtonClick("characters");
+              navigate("/Arcane-characters");
+            }}
+          >
+            <span
+              className={`inline-block ${
+                activeButton === "characters"
+                  ? "border-b-2 border-orange-200"
+                  : ""
+              }`}
+            >
+              ALL CHARACTERS
+            </span>
+          </button>
+        )}
+        {location.pathname === "/Arcane-characters-detail" && (
+          <button
+            className="pl-4 text-bold text-orange-200"
+            onClick={() => handleButtonClick("detail")}
+          >
+            <span
+              className={`inline-block ${
+                activeButton === "detail" ? "border-b-2 border-orange-200" : ""
+              }`}
+            >
+              Details
             </span>
           </button>
         )}
@@ -69,29 +105,14 @@ const NavbarDesp = () => {
         {location.pathname === "/Arcane-characters" && (
           <button
             className="pl-4 text-bold text-orange-200"
-            onClick={() => handleButtonClick("pilt")}
-          >
-            <span
-              className={`inline-block ${
-                activeButton === "pilt" ? "border-b-2 border-orange-200" : ""
-              }`}
-            >
-              PILTOVER
-            </span>
-          </button>
-        )}
-
-        {location.pathname === "/Arcane-characters" && (
-          <button
-            className="pl-4 text-bold text-orange-200"
-            onClick={() => handleButtonClick("zaun")}
+            onClick={() => {handleButtonClick("zaun");navigate("/Arcane-characters-zaun"); }}
           >
             <span
               className={`inline-block ${
                 activeButton === "zaun" ? "border-b-2 border-orange-200" : ""
               }`}
             >
-              ZAUN
+              Zaun
             </span>
           </button>
         )}
@@ -106,7 +127,7 @@ const NavbarDesp = () => {
                 activeButton === "noxus" ? "border-b-2 border-orange-200" : ""
               }`}
             >
-              NOXUS
+              Noxus
             </span>
           </button>
         )}
@@ -126,40 +147,173 @@ const NavbarDesp = () => {
           </button>
         )}
         {location.pathname === "/Arcane-serie" && (
-          <button className="pl-4 text-bold text-orange-200">SERIE</button>
+          <button
+            className="pl-4 text-bold text-orange-200"
+            onClick={() => handleButtonClick("serie")}
+          >
+            <span
+              className={`inline-block ${
+                activeButton === "serie"
+                  ? "border-b-2 border-orange-200"
+                  : ""
+              }`}
+            >
+              SERIE
+            </span>
+          </button>
         )}
         {location.pathname === "/Arcane-serie" && (
           <button
             className="pl-4 text-bold text-orange-200"
-            onClick={() => handleButtonClick("noxus")}
+            onClick={() => {
+              handleButtonClick("temporada1");
+              navigate("/Arcane-serie-season1");
+            }}
+            
           >
             <span
               className={`inline-block ${
-                activeButton === "temporada1"
-                  ? "border-b-2 border-orange-200"
-                  : ""
+                activeButton === "temporada1" ? "border-b-2 border-orange-200" : ""
               }`}
             >
-              TEMPORADA1
+              Temporada 1
             </span>
           </button>
         )}
- {location.pathname === "/Arcane-serie" && (
+
+        {location.pathname === "/Arcane-serie" && (
           <button
             className="pl-4 text-bold text-orange-200"
-            onClick={() => handleButtonClick("noxus")}
+           
+              onClick={() => {
+                handleButtonClick("temporada2");
+                navigate("/Arcane-serie-season2");
+              }}
           >
             <span
               className={`inline-block ${
-                activeButton === "temporada2"
+                activeButton === "temproada2" ? "border-b-2 border-orange-200" : ""
+              }`}
+            >
+              Temporada 2
+            </span>
+          </button>
+        )}
+          {location.pathname === "/Arcane-serie-season2" && (
+          <button
+            className="pl-4 text-bold text-orange-200"
+            onClick={() => {
+              handleButtonClick("serie");
+              navigate("/Arcane-serie");
+            }}
+          >
+            <span
+              className={`inline-block ${
+                activeButton === "serie"
                   ? "border-b-2 border-orange-200"
                   : ""
               }`}
             >
-              TEMPORADA2
+              SERIE
             </span>
           </button>
         )}
+         {location.pathname === "/Arcane-serie-season1" && (
+          <button
+            className="pl-4 text-bold text-orange-200"
+            onClick={() => {
+              handleButtonClick("serie");
+              navigate("/Arcane-serie");
+            }}
+          >
+            <span
+              className={`inline-block ${
+                activeButton === "serie"
+                  ? "border-b-2 border-orange-200"
+                  : ""
+              }`}
+            >
+              SERIE
+            </span>
+          </button>
+        )}
+        {location.pathname === "/Arcane-serie-season2" && (
+          <button
+            className="pl-4 text-bold text-orange-200"
+            onClick={() => {
+              handleButtonClick("temporada1");
+              navigate("/Arcane-serie-season1");
+              
+            }}
+            
+          >
+            <span
+              className={`inline-block ${
+                activeButton === "temporada1" ? "border-b-2 border-orange-200" : ""
+              }`}
+            >
+              Temporada 1
+            </span>
+          </button>
+        )}
+  {location.pathname === "/Arcane-serie-season1" && (
+          <button
+            className="pl-4 text-bold text-orange-200"
+            onClick={() => {
+              handleButtonClick("temporada1");
+              navigate("/Arcane-serie-season1");
+              
+            }}
+            
+          >
+            <span
+              className={`inline-block ${
+                activeButton === "temporada1" ? "border-b-2 border-orange-200" : ""
+              }`}
+            >
+              Temporada 1
+            </span>
+          </button>
+        )}
+          {location.pathname === "/Arcane-serie-season1" && (
+          <button
+            className="pl-4 text-bold text-orange-200"
+            onClick={() => {
+              handleButtonClick("temporada2");
+              navigate("/Arcane-serie-season2");
+              
+            }}
+            
+          >
+            <span
+              className={`inline-block ${
+                activeButton === "temporada2" ? "border-b-2 border-orange-200" : ""
+              }`}
+            >
+              Temporada 2
+            </span>
+          </button>
+        )}
+        {location.pathname === "/Arcane-serie-season2" && (
+          <button
+            className="pl-4 text-bold text-orange-200"
+            onClick={() => {
+              handleButtonClick("season2")
+              
+            }}
+          >
+            <span
+              className={`inline-block ${
+                activeButton === "season2" ? "border-b-2 border-orange-200" : ""
+              }`}
+            >
+              Temporada 2
+            </span>
+          </button>
+        )}
+
+
+  
 
         {location.pathname === "/Arcane-reviews" && (
           <button

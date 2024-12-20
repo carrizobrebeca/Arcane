@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../Pages/Navbar";
 import NavbarDesp from "../Pages/NavbarDesp";
-import Card from "../Pages/Card";
+import Details from "../Pages/Details";
 
 
-const Characters = () => {
+const Detail = () => {
   return (
     <>
     <Navbar />
@@ -26,13 +26,12 @@ const Characters = () => {
            
           }}>
        
-        <div className="mt-[-150px]">
-       
-        <Card />
+        <div className="mt-[-70px]">
+        <Details/>
         </div>
       </div>
     </>
   );
 };
 
-export default Characters;
+export default Detail;

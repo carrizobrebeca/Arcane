@@ -20,7 +20,7 @@ const Home = () => {
             alignItems: "center",
             textAlign: "center",
             padding: "-10px",
-            margin: "-10px",
+            margin: "0%",
            
           }}>
        
